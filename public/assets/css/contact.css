@@ -1,0 +1,164 @@
+Container Utama Layout Contact
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-title-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-title-section h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-title-section p {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* Grid 2 Kolom */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+/* ================= BOKS FORM (KIRI) ================= */
+.contact-form-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form-card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.form-group-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.form-group-contact label {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.form-group-contact input,
+.form-group-contact textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.form-group-contact input:focus,
+.form-group-contact textarea:focus {
+    border: 1px solid #22d3ee;
+    outline: none;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+.btn-contact-send {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #2563eb, #22d3ee);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-send:hover {
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ================= BOKS INFO (KANAN) ================= */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card-kustom {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #22d3ee;
+}
+
+.info-text h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.info-text p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin: 4px 0 0 0;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    height: 200px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(0,0,0,0.5) 100%);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 13px;
+    gap: 8px;
+}

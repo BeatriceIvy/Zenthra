@@ -1,0 +1,25 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+
+    <g stroke="#22d3ee" stroke-width="1" opacity="0.15" fill="none">
+
+        <path d="M50 100 H180 V180 H250"></path>
+        <circle cx="250" cy="180" r="3"></circle>
+
+        <path d="M120 300 H220 V240 H350"></path>
+        <circle cx="350" cy="240" r="3"></circle>
+
+        <path d="M400 80 V180 H500"></path>
+        <circle cx="500" cy="180" r="3"></circle>
+
+        <path d="M300 400 H450 V500"></path>
+        <circle cx="450" cy="500" r="3"></circle>
+
+        <path d="M150 500 H250 V420 H320"></path>
+        <circle cx="320" cy="420" r="3"></circle>
+
+        <path d="M450 300 H550"></path>
+        <circle cx="550" cy="300" r="3"></circle>
+
+    </g>
+
+</svg>

@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #0f172a;
+    --accent-color: #22d3ee;
+    --neutral-color: #e5e7eb;
+    --dark-accent: #020617;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #94a3b8;
+    --border: 1px solid #dddddd;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-about {
+    background: url('../image/login-img.png');
+    background-size: cover;
+    background-position: 30% 70%;
+    width: 100%;
+    height: 400px;
+    padding: 20px 70px;
+}
+
+.hero-about-title {
+    display: flex;
+    font-weight: 600;
+    gap: 6px;
+}
+
+.hero-about p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 450px;
+}
+
+.about-container p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 350px;
+}
+
+.hero-about button {
+    color: var(--primary-text-color) !important;
+    margin-top: 15px;
+}
+
+.about-container button {
+    color: var(--primary-text-color) !important;
+    margin-top: 15px;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+    width: 100%;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.4);
+    height: 150px;
+    width: 90%;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sub-box {
+    padding: 20px 35px;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-box {
+    background-color: var(--secondary-color);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.icon-img {
+    width: 40px;
+    height: 40px;
+}
+
+.text-box h1 {
+    font-weight: 500;
+}
+
+.sub{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.desc {
+    color: var(--secondary-text-color);
+    font-size: 10px;
+}
+
+hr {
+    height: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.abouts-card {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    width: 350px;
+    margin-right: 50px;
+}
+
+.about-cards{
+    background: url('../image/about.png');
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    border: 1px solid rgb(92, 92, 92);
+}

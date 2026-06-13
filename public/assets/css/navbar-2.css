@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #0f172a;
+    --accent-color: #22d3ee;
+    --neutral-color: #e5e7eb;
+    --danger-color: #e63946;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #94a3b8;
+    --border: 1px solid #dddddd;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar nav ul a li {
+    padding: 0.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul a li:hover {
+    color: var(--accent-color);
+}
+
+.user-actions {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.search-input {
+    padding: 8px 16px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    width: 200px;
+    transition: width 0.3s;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    width: 250px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-btn, .cart-btn {
+    font-size: 20px;
+    color: var(--primary-text-color);
+    transition: color .3s;
+}
+
+.search-btn:hover, .cart-btn:hover {
+    color: var(--accent-color);
+}
+
+.cart-count {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--danger-color);
+    color: var(--primary-text-color);
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 4px;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    transition: color .3s;
+    padding: 8px;
+}
+
+.profile-btn:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
