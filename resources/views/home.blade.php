@@ -52,9 +52,9 @@
             @forelse ($products as $product)
             {{-- <a href="{{ route('products.index', ['category' => $category->id]) }}" class="category-card-link" style="text-decoration: none;"> --}}
                 @include('components.product-card', [
+                    'id' => $product->id,
                     'name' => $product->name,
                     'brand' => $product->brand,
-                    // 'image' => $product->image,
                     'price' => $product->price,
                     'stock' => $product->stock,
                     'description' => $product->description,

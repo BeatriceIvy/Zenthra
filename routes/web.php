@@ -30,6 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/checkout', [OrderController::class, 'showCheckout'])->name('checkout.show');
     Route::post('/checkout', [OrderController::class, 'placeOrder'])->name('checkout.store');
+    Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
+    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
 });
 
 require __DIR__.'/auth.php';

@@ -38,9 +38,9 @@
         <div class="card-product">
             @forelse ($products as $product)
                 @include('components.product-card', [
+                    'id' => $product->id,
                     'name' => $product->name,
                     'brand' => $product->brand,
-                    // 'image' => $product->image,
                     'price' => $product->price,
                     'stock' => $product->stock,
                     'description' => $product->description,
