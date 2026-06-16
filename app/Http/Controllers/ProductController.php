@@ -11,21 +11,27 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        // 1. Siapkan query dasar untuk mengambil produk beserta relasi kategorinya
+        // 1. Siapkan query dasar
         $productQuery = Product::with('category')->latest();
 
-        // 2. JIKA DI URL ADA PARAMETER ?category=ID, MAKA SARING PRODUKNYA
+        // 2. LOGIKA SEARCH (Pastikan bagian ini sudah ada, bro!)
+        if ($request->has('search') && $request->search != '') {
+            $keyword = $request->search;
+            $productQuery->where(function ($query) use ($keyword) {
+                $query->where('name', 'like', "%" . $keyword . "%")
+                    ->orWhere('brand', 'like', "%" . $keyword . "%");
+            });
+        }
+
+        // 3. Saringan kategori bawaanmu
         if ($request->has('category') && $request->category != '') {
             $productQuery->where('category_id', $request->category);
         }
 
-        // 3. Eksekusi query produk setelah disaring
+        // 4. Eksekusi query
         $products = $productQuery->get();
-
-        // 4. Ambil semua kategori untuk kebutuhan list di sidebar kiri
         $categories = Category::withCount('products')->get();
 
-        // 5. Lempar datanya ke view
         return view('products.index', compact('products', 'categories'));
     }
 
@@ -74,7 +80,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         $categories = Category::all(); // Diperlukan untuk isi dropdown kategori di form edit
-        
+
         return view('products.edit', compact('product', 'categories'));
     }
 

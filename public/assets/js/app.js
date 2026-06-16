@@ -30,3 +30,27 @@ btn.addEventListener("click", function () {
     document.addEventListener('click', function() {
         dropdownContent.classList.remove('show');
     });
+
+    function openQuickView(id) {
+        const modal = document.getElementById('quickview-modal-' + id);
+        if(modal) {
+            modal.classList.add('zv-active');
+        }
+    }
+
+    function closeQuickView(id) {
+        const modal = document.getElementById('quickview-modal-' + id);
+        if(modal) {
+            modal.classList.remove('zv-active');
+        }
+    }
+
+    // Penutup Otomatis jika Admin menekan tombol ESC di keyboard saat demo
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const activeModal = document.querySelector('.zv-modal-overlay.zv-active');
+            if (activeModal) {
+                activeModal.classList.remove('zv-active');
+            }
+        }
+    });

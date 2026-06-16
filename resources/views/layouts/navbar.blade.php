@@ -18,12 +18,13 @@
     </nav>
     <div class="user-action">
         <div class="row">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Product search...">
-                <button class="search-btn">
+            
+            <form action="{{ route('products.index') }}" method="GET" class="search-container" style="margin: 0; display: flex;">
+                <input type="text" name="search" class="search-input" value="{{ request('search') }}" placeholder="Product search...">
+                <button type="submit" class="search-btn" style="cursor: pointer; border: none; background: none;">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </div>
+            </form>
             <div class="profile-dropdown">
                 <button class="profile-btn">
                     <i class="fa-solid fa-circle-user"></i>
